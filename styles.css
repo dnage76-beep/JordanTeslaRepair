@@ -360,7 +360,7 @@ ul {
     position: relative;
     max-width: 1100px;
     margin: 0 auto 40px;
-    min-height: 520px;
+    min-height: 580px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -381,60 +381,85 @@ ul {
 
 .float-quote {
     position: absolute;
-    max-width: 240px;
+    max-width: 320px;
     z-index: 3;
     animation: floatQuote 6s ease-in-out infinite;
 }
 
 .float-quote p {
     margin: 0 0 6px;
-    font-size: 0.92rem;
-    color: #555;
+    font-size: 0.9rem;
+    color: rgba(90, 80, 70, 0.55);
     font-style: italic;
     line-height: 1.55;
 }
 
 .float-quote cite {
-    font-size: 0.75rem;
-    color: #cc0000;
+    font-size: 0.72rem;
+    color: rgba(204, 0, 0, 0.45);
     font-style: normal;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
 
-/* Position each quote around Jordan */
+/* Position 6 quotes around Jordan */
 .fq-1 {
-    top: 40px;
-    left: 5%;
+    top: 15px;
+    left: 2%;
     text-align: right;
     animation-delay: 0s;
 }
 
 .fq-2 {
-    bottom: 80px;
-    left: 3%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
     text-align: right;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 
 .fq-3 {
-    top: 30px;
-    right: 5%;
+    bottom: 40px;
+    left: 3%;
+    text-align: right;
+    animation-delay: 2s;
+}
+
+.fq-4 {
+    top: 15px;
+    right: 2%;
     text-align: left;
     animation-delay: 3s;
 }
 
-.fq-4 {
-    bottom: 100px;
+.fq-5 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: left;
+    animation-delay: 4s;
+}
+
+.fq-6 {
+    bottom: 40px;
     right: 3%;
     text-align: left;
-    animation-delay: 4.5s;
+    animation-delay: 5s;
 }
 
 @keyframes floatQuote {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
+}
+
+.fq-2, .fq-5 {
+    animation-name: floatQuoteMid;
+}
+
+@keyframes floatQuoteMid {
+    0%, 100% { transform: translateY(-50%); }
+    50% { transform: translateY(calc(-50% - 8px)); }
 }
 
 .about-text-full {
@@ -941,16 +966,15 @@ ul {
     }
 
     .about-float-wrap {
-        min-height: 450px;
+        min-height: 480px;
     }
 
     .about-image img {
-        max-width: 260px;
+        max-width: 250px;
     }
 
     .float-quote {
-        max-width: 180px;
-        font-size: 0.85rem;
+        max-width: 240px;
     }
 
     .services-grid {
