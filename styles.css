@@ -1075,22 +1075,40 @@ ul {
         font-size: 0.8rem;
     }
 
-    /* About -- stack quotes below on mobile */
+    /* About -- stack on mobile */
     .about-float-wrap {
         min-height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .about-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .about-image img {
+        max-width: 200px;
+        margin-bottom: 0;
     }
 
     .float-quote {
         position: static;
-        max-width: 100%;
+        max-width: 85%;
         text-align: center;
-        margin: 15px auto;
+        margin: 12px auto;
         animation: none;
+        transform: none !important;
     }
 
-    .about-image img {
-        max-width: 220px;
-        margin-bottom: 25px;
+    .float-quote p {
+        font-size: 0.85rem;
+        color: rgba(90, 80, 70, 0.65);
+    }
+
+    .float-quote cite {
+        font-size: 0.7rem;
     }
 
     /* Sections */
